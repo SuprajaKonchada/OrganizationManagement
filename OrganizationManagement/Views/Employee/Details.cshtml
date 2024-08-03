@@ -1,0 +1,17 @@
+﻿@model EmployeeDetails
+
+<h1>Employee Details</h1>
+
+<dl class="dl-horizontal">
+    <dt>Name</dt>
+    <dd>@Model.FullName</dd>
+    <dt>Department</dt>
+    <dd>@Model.Department</dd>
+    <dt>Position</dt>
+    <dd>@Model.Position</dd>
+</dl>
+
+<p>
+    <a href="@Url.Action("Edit", "Employee", new { id = Model.Id })">Edit</a> |
+    <a href="@Url.Action("Index", "Employee")">Back to List</a>
+</p>
